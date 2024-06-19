@@ -1,0 +1,141 @@
+---
+title: "开发环境配置"
+date: "2024-06-16"
+date-modified: "2024-06-16"
+toc: true
+---
+
+# Windows
+
+- Clash：网络代理。
+
+- [Windows Terminal](https://learn.microsoft.com/zh-cn/windows/terminal/)：终端模拟器，具备多选项卡、窗格等功能。
+
+- [Powertoys](https://learn.microsoft.com/zh-cn/windows/powertoys/)：实用工具，包括键盘管理器、保持唤醒、颜色选择器、屏幕标尺、批量重命名、图像大小调整器、鼠标实用程序等。
+
+- [WSL](https://learn.microsoft.com/zh-cn/windows/wsl/install)：Linux 虚拟机。
+
+
+# Linux
+
+## [fish](https://fishshell.com/)
+
+::: {.callout-tip}
+
+安装 fish：
+
+```sh
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
+```
+
+切换默认 shell 为 fish（需重启）：
+
+```sh
+chsh -s /usr/bin/fish
+```
+
+:::
+
+fish 的优势在于开箱即用的语法高亮、自动提示及 Tab 键补全。
+虽然兼容 bash 语法的 [zsh](https://www.zsh.org/) 也可通过脚本实现上述功能，但其速度慢于 fish。
+
+![fish 特性](fish_features.webm)
+
+fish 语法不同于 bash，这点需要适应。例如设置环境变量：
+
+```sh
+# bash
+export PATH=/bin:$PATH
+
+# fish
+set -x PATH /bin $PATH
+```
+
+## 常用工具
+
+### [ripgrep](https://github.com/BurntSushi/ripgrep)、[fd](https://github.com/sharkdp/fd)、[bat](https://github.com/sharkdp/bat)
+
+::: {.callout-tip}
+
+安装 ripgrep、fd、bat
+
+```sh
+sudo apt install ripgrep fd-find bat
+```
+
+:::
+
+此三者分别为 grep、find 和 cat 的替代，具有更好性能及易用性。
+
+### [fzf](https://github.com/junegunn/fzf)
+
+::: {.callout-tip}
+
+安装 fzf：
+
+```sh
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+设置 fzf 快捷键绑定：
+
+```sh
+# Set up fzf key bindings
+fzf --fish | source
+```
+
+:::
+
+![fzf 特性](fzf_features.webm)
+
+![fzf 快捷键绑定](fzf_keymaps.webm)
+
+## [Neovim](https://neovim.io/)
+
+::: {.callout-tip}
+
+安装 Neovim：
+
+```sh
+mkdir -p ~/.local/bin
+wget -O ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod +x ~/.local/bin/nvim
+```
+
+编辑 `~/.config/fish/config.fish`，添加上述路径至环境变量：
+
+```sh
+set -x PATH ~/.local/bin $PATH
+```
+
+下载 Neovim 配置：
+
+```sh
+git clone --depth 1 https://github.com/GlekoMa/nvim
+mv nvim ~/.config/nvim
+```
+
+进入 `nvim`，执行 `PlugInstall`。
+
+:::
+
+Neovim 是 vim 的分叉，拥有更活跃的社区。
+Neovim/vim 界面没有多余组件，只需掌握 `hjkl`（移动光标）、`i`（插入）、`<Esc>`（返回普通模式）、`:w`（保存）和 `:q`（退出）即可使用。输入`:Tutor` 查看并练习更多操作。
+
+![nvim 配置](nvim_config.png)
+
+
+<!--
+## 桌面环境
+
+### 窗口管理器：[niri](https://github.com/yalter/niri)
+
+TODO
+
+### 输入法：[fcitx5](https://github.com/fcitx/fcitx5)
+
+TODO
+-->

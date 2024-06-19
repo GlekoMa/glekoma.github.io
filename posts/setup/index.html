@@ -206,15 +206,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Linux</h1>
 <section id="fish" class="level2">
 <h2 class="anchored" data-anchor-id="fish"><a href="https://fishshell.com/">fish</a></h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>安装 fish：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-add-repository ppa:fish-shell/release-3</span>
@@ -222,6 +224,7 @@ Tip
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install fish</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>切换默认 shell 为 fish（需重启）：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chsh</span> <span class="at">-s</span> /usr/bin/fish</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <p>fish 的优势在于开箱即用的语法高亮、自动提示及 Tab 键补全。 虽然兼容 bash 语法的 <a href="https://www.zsh.org/">zsh</a> 也可通过脚本实现上述功能，但其速度慢于 fish。</p>
@@ -242,33 +245,38 @@ Tip
 <h2 class="anchored" data-anchor-id="常用工具">常用工具</h2>
 <section id="ripgrepfdbat" class="level3">
 <h3 class="anchored" data-anchor-id="ripgrepfdbat"><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a>、<a href="https://github.com/sharkdp/fd">fd</a>、<a href="https://github.com/sharkdp/bat">bat</a></h3>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>安装 ripgrep、fd、bat</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install ripgrep fd-find bat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <p>此三者分别为 grep、find 和 cat 的替代，具有更好性能及易用性。</p>
 </section>
 <section id="fzf" class="level3">
 <h3 class="anchored" data-anchor-id="fzf"><a href="https://github.com/junegunn/fzf">fzf</a></h3>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>安装 fzf：</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/junegunn/fzf.git ~/.fzf</span>
@@ -278,6 +286,8 @@ Tip
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">fzf</span> <span class="at">--fish</span> <span class="kw">|</span> <span class="bu">source</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
+<p>fzf (fuzzy finder) 是一个命令行模糊查找工具，用于快速搜索和过滤大量文本数据。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><video src="fzf_features.webm" class="img-fluid" controls=""><a href="fzf_features.webm">Video</a></video></p>
@@ -294,15 +304,17 @@ Tip
 </section>
 <section id="neovim" class="level2">
 <h2 class="anchored" data-anchor-id="neovim"><a href="https://neovim.io/">Neovim</a></h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>安装 Neovim：</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.local/bin</span>
@@ -314,6 +326,7 @@ Tip
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/GlekoMa/nvim</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> nvim ~/.config/nvim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>进入 <code>nvim</code>，执行 <code>PlugInstall</code>。</p>
+</div>
 </div>
 </div>
 <p>Neovim 是 vim 的分叉，拥有更活跃的社区。 Neovim/vim 界面没有多余组件，只需掌握 <code>hjkl</code>（移动光标）、<code>i</code>（插入）、<code>&lt;Esc&gt;</code>（返回普通模式）、<code>:w</code>（保存）和 <code>:q</code>（退出）即可使用。输入<code>:Tutor</code> 查看并练习更多操作。</p>

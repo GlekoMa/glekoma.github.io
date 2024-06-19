@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/setup/index.html",
+    "href": "posts/setup/index.html",
+    "title": "开发环境配置",
+    "section": "",
+    "text": "Clash：网络代理。\nWindows Terminal：终端模拟器，具备多选项卡、窗格等功能。\nPowertoys：实用工具，包括键盘管理器、保持唤醒、颜色选择器、屏幕标尺、批量重命名、图像大小调整器、鼠标实用程序等。\nWSL：Linux 虚拟机。"
+  },
+  {
+    "objectID": "posts/setup/index.html#fish",
+    "href": "posts/setup/index.html#fish",
+    "title": "开发环境配置",
+    "section": "fish",
+    "text": "fish\n\n\n\n\n\n\nTip\n\n\n\n安装 fish：\nsudo apt-add-repository ppa:fish-shell/release-3\nsudo apt update\nsudo apt install fish\n切换默认 shell 为 fish（需重启）：\nchsh -s /usr/bin/fish\n\n\nfish 的优势在于开箱即用的语法高亮、自动提示及 Tab 键补全。 虽然兼容 bash 语法的 zsh 也可通过脚本实现上述功能，但其速度慢于 fish。\n\n\nVideo\nfish 特性\n\n\nfish 语法不同于 bash，这点需要适应。例如设置环境变量：\n# bash\nexport PATH=/bin:$PATH\n\n# fish\nset -x PATH /bin $PATH"
+  },
+  {
+    "objectID": "posts/setup/index.html#常用工具",
+    "href": "posts/setup/index.html#常用工具",
+    "title": "开发环境配置",
+    "section": "常用工具",
+    "text": "常用工具\n\nripgrep、fd、bat\n\n\n\n\n\n\nTip\n\n\n\n安装 ripgrep、fd、bat\nsudo apt install ripgrep fd-find bat\n\n\n此三者分别为 grep、find 和 cat 的替代，具有更好性能及易用性。\n\n\nfzf\n\n\n\n\n\n\nTip\n\n\n\n安装 fzf：\ngit clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf\n~/.fzf/install\n设置 fzf 快捷键绑定：\n# Set up fzf key bindings\nfzf --fish | source\n\n\n\n\nVideo\nfzf 特性\n\n\n\n\nVideo\nfzf 快捷键绑定"
+  },
+  {
+    "objectID": "posts/setup/index.html#neovim",
+    "href": "posts/setup/index.html#neovim",
+    "title": "开发环境配置",
+    "section": "Neovim",
+    "text": "Neovim\n\n\n\n\n\n\nTip\n\n\n\n安装 Neovim：\nmkdir -p ~/.local/bin\nwget -O ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage\nchmod +x ~/.local/bin/nvim\n编辑 ~/.config/fish/config.fish，添加上述路径至环境变量：\nset -x PATH ~/.local/bin $PATH\n下载 Neovim 配置：\ngit clone --depth 1 https://github.com/GlekoMa/nvim\nmv nvim ~/.config/nvim\n进入 nvim，执行 PlugInstall。\n\n\nNeovim 是 vim 的分叉，拥有更活跃的社区。 Neovim/vim 界面没有多余组件，只需掌握 hjkl（移动光标）、i（插入）、&lt;Esc&gt;（返回普通模式）、:w（保存）和 :q（退出）即可使用。输入:Tutor 查看并练习更多操作。\n\n\n\nnvim 配置"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gleko Ma",
+    "section": "",
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\nJun 16, 2024\n\n\n开发环境配置\n\n\n\n\n\nNo matching items"
+  }
+]

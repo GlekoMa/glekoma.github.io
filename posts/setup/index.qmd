@@ -20,7 +20,7 @@ toc: true
 
 ## [fish](https://fishshell.com/)
 
-::: {.callout-tip}
+::: {.callout-note collapse="true"}
 
 安装 fish：
 
@@ -57,7 +57,7 @@ set -x PATH /bin $PATH
 
 ### [ripgrep](https://github.com/BurntSushi/ripgrep)、[fd](https://github.com/sharkdp/fd)、[bat](https://github.com/sharkdp/bat)
 
-::: {.callout-tip}
+::: {.callout-note collapse="true"}
 
 安装 ripgrep、fd、bat
 
@@ -71,7 +71,7 @@ sudo apt install ripgrep fd-find bat
 
 ### [fzf](https://github.com/junegunn/fzf)
 
-::: {.callout-tip}
+::: {.callout-note collapse="true"}
 
 安装 fzf：
 
@@ -89,13 +89,15 @@ fzf --fish | source
 
 :::
 
+fzf (fuzzy finder) 是一个命令行模糊查找工具，用于快速搜索和过滤大量文本数据。
+
 ![fzf 特性](fzf_features.webm)
 
 ![fzf 快捷键绑定](fzf_keymaps.webm)
 
 ## [Neovim](https://neovim.io/)
 
-::: {.callout-tip}
+::: {.callout-note collapse="true"}
 
 安装 Neovim：
 

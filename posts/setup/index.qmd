@@ -129,6 +129,10 @@ Neovim/vim 界面没有多余组件，只需掌握 `hjkl`（移动光标）、`i
 
 ![nvim 配置](nvim_config.png)
 
+nvim/vim 易于扩展，例如配置 `F5` 快捷编译执行 C 代码：
+
+![nvim 快捷编译执行 C 代码](nvim_gcc_map.webm)
+
 
 <!--
 ## 桌面环境

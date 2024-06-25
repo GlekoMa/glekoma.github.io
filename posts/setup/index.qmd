@@ -97,6 +97,20 @@ fzf (fuzzy finder) 是一个命令行模糊查找工具，用于快速搜索和�
 
 ## [Neovim](https://neovim.io/)
 
+::: {.callout-tip}
+
+若非已熟悉 Neovim/Vim，可考虑使用 [Helix](https://helix-editor.com/)。
+
+Helix 具有类似 Vim（但有所不同）的编辑模式、更平滑的学习曲线以及开箱即用的 [Tree-sitter](https://tree-sitter.github.io/tree-sitter/)（提供语法高亮、自动缩进等功能）、[LSP](https://microsoft.github.io/language-server-protocol/)（提供自动补全、定义跳转、引用查找等功能）、模糊查找、自动括号等支持。其不足目前主要在于没有成熟的插件机制。
+
+上述功能于 Neovim 皆可借由插件实现，但学习成本毕竟较大。
+
+Vim、Neovim、Helix 可类比于 bash、zsh、fish：bash 粗糙却或许已满足需求，zsh
+需配置却取得了兼容性的平衡，而对于无编写大量兼容性 shell 脚本需求的用户，fish just works fine。
+
+:::
+
+
 ::: {.callout-note collapse="true"}
 
 安装 Neovim：
@@ -124,14 +138,14 @@ mv nvim ~/.config/nvim
 
 :::
 
-Neovim 是 vim 的分叉，拥有更活跃的社区。
-Neovim/vim 界面没有多余组件，只需掌握 `hjkl`（移动光标）、`i`（插入）、`<Esc>`（返回普通模式）、`:w`（保存）和 `:q`（退出）即可使用。输入`:Tutor` 查看并练习更多操作。
+Neovim 是 Vim 的分叉，拥有更活跃的社区。
+Neovim/Vim 界面没有多余组件，只需掌握 `hjkl`（移动光标）、`i`（插入）、`<Esc>`（返回普通模式）、`:w`（保存）和 `:q`（退出）即可使用。输入`:Tutor` 查看并练习更多操作。
 
-![nvim 配置](nvim_config.png)
+![已配置 Neovim 截图](nvim_config.png)
 
-nvim/vim 易于扩展，例如配置 `F5` 快捷编译执行 C 代码：
+Neovim/Vim 易于扩展，例如配置 `F5` 快捷编译执行 C 代码：
 
-![nvim 快捷编译执行 C 代码](nvim_gcc_map.webm)
+![Neovim 快捷编译执行 C 代码](nvim_gcc_map.webm)
 
 
 <!--

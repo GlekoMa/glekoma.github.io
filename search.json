@@ -25,7 +25,7 @@
     "href": "posts/setup/index.html#neovim",
     "title": "开发环境配置",
     "section": "Neovim",
-    "text": "Neovim\n\n\n\n\n\n\nNote\n\n\n\n\n\n安装 Neovim：\nmkdir -p ~/.local/bin\nwget -O ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage\nchmod +x ~/.local/bin/nvim\n编辑 ~/.config/fish/config.fish，添加上述路径至环境变量：\nset -x PATH ~/.local/bin $PATH\n下载 Neovim 配置：\ngit clone --depth 1 https://github.com/GlekoMa/nvim\nmv nvim ~/.config/nvim\n进入 nvim，执行 PlugInstall。\n\n\n\nNeovim 是 vim 的分叉，拥有更活跃的社区。 Neovim/vim 界面没有多余组件，只需掌握 hjkl（移动光标）、i（插入）、&lt;Esc&gt;（返回普通模式）、:w（保存）和 :q（退出）即可使用。输入:Tutor 查看并练习更多操作。\n\n\n\nnvim 配置\n\n\nnvim/vim 易于扩展，例如配置 F5 快捷编译执行 C 代码：\n\n\nVideo\nnvim 快捷编译执行 C 代码"
+    "text": "Neovim\n\n\n\n\n\n\nTip\n\n\n\n若非已熟悉 Neovim/Vim，可考虑使用 Helix。\nHelix 具有类似 Vim（但有所不同）的编辑模式、更平滑的学习曲线以及开箱即用的 Tree-sitter（提供语法高亮、自动缩进等功能）、LSP（提供自动补全、定义跳转、引用查找等功能）、模糊查找、自动括号等支持。其不足目前主要在于没有成熟的插件机制。\n上述功能于 Neovim 皆可借由插件实现，但学习成本毕竟较大。\nVim、Neovim、Helix 可类比于 bash、zsh、fish：bash 粗糙却或许已满足需求，zsh 需配置却取得了兼容性的平衡，而对于无编写大量兼容性 shell 脚本需求的用户，fish just works fine。\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\n安装 Neovim：\nmkdir -p ~/.local/bin\nwget -O ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage\nchmod +x ~/.local/bin/nvim\n编辑 ~/.config/fish/config.fish，添加上述路径至环境变量：\nset -x PATH ~/.local/bin $PATH\n下载 Neovim 配置：\ngit clone --depth 1 https://github.com/GlekoMa/nvim\nmv nvim ~/.config/nvim\n进入 nvim，执行 PlugInstall。\n\n\n\nNeovim 是 Vim 的分叉，拥有更活跃的社区。 Neovim/Vim 界面没有多余组件，只需掌握 hjkl（移动光标）、i（插入）、&lt;Esc&gt;（返回普通模式）、:w（保存）和 :q（退出）即可使用。输入:Tutor 查看并练习更多操作。\n\n\n\n已配置 Neovim 截图\n\n\nNeovim/Vim 易于扩展，例如配置 F5 快捷编译执行 C 代码：\n\n\nVideo\nNeovim 快捷编译执行 C 代码"
   },
   {
     "objectID": "index.html",

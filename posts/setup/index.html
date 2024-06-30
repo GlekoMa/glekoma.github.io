@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.5.52">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">June 25, 2024</p>
+        <p class="date-modified">June 30, 2024</p>
       </div>
     </div>
       
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ripgrepfdbat" id="toc-ripgrepfdbat" class="nav-link" data-scroll-target="#ripgrepfdbat">ripgrep、fd、bat</a></li>
   <li><a href="#fzf" id="toc-fzf" class="nav-link" data-scroll-target="#fzf">fzf</a></li>
   </ul></li>
-  <li><a href="#neovim" id="toc-neovim" class="nav-link" data-scroll-target="#neovim">Neovim</a></li>
+  <li><a href="#helix" id="toc-helix" class="nav-link" data-scroll-target="#helix">Helix</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -302,64 +302,65 @@ Note
 </div>
 </section>
 </section>
-<section id="neovim" class="level2">
-<h2 class="anchored" data-anchor-id="neovim"><a href="https://neovim.io/">Neovim</a></h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="helix" class="level2">
+<h2 class="anchored" data-anchor-id="helix"><a href="https://helix-editor.com">Helix</a></h2>
 <p>若非已熟悉 Neovim/Vim，可考虑使用 <a href="https://helix-editor.com/">Helix</a>。</p>
 <p>Helix 具有类似 Vim（但有所不同）的编辑模式、更平滑的学习曲线以及开箱即用的 <a href="https://tree-sitter.github.io/tree-sitter/">Tree-sitter</a>（提供语法高亮、自动缩进等功能）、<a href="https://microsoft.github.io/language-server-protocol/">LSP</a>（提供自动补全、定义跳转、引用查找等功能）、模糊查找、自动括号等支持。其不足目前主要在于没有成熟的插件机制。</p>
 <p>上述功能于 Neovim 皆可借由插件实现，但学习成本毕竟较大。</p>
 <p>Vim、Neovim、Helix 可类比于 bash、zsh、fish：bash 粗糙却或许已满足需求，zsh 需配置却取得了兼容性的平衡，而对于无编写大量兼容性 shell 脚本需求的用户，fish just works fine。</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>安装 Neovim：</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.local/bin</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-O</span> ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x ~/.local/bin/nvim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>编辑 <code>~/.config/fish/config.fish</code>，添加上述路径至环境变量：</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-x</span> PATH ~/.local/bin <span class="va">$PATH</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>下载 Neovim 配置：</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/GlekoMa/nvim</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> nvim ~/.config/nvim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>进入 <code>nvim</code>，执行 <code>PlugInstall</code>。</p>
-</div>
-</div>
-</div>
-<p>Neovim 是 Vim 的分叉，拥有更活跃的社区。 Neovim/Vim 界面没有多余组件，只需掌握 <code>hjkl</code>（移动光标）、<code>i</code>（插入）、<code>&lt;Esc&gt;</code>（返回普通模式）、<code>:w</code>（保存）和 <code>:q</code>（退出）即可使用。输入<code>:Tutor</code> 查看并练习更多操作。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="nvim_config.png" class="img-fluid figure-img"></p>
-<figcaption>已配置 Neovim 截图</figcaption>
-</figure>
-</div>
-<p>Neovim/Vim 易于扩展，例如配置 <code>F5</code> 快捷编译执行 C 代码：</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="nvim_gcc_map.webm" class="img-fluid" controls=""><a href="nvim_gcc_map.webm">Video</a></video></p>
-<figcaption>Neovim 快捷编译执行 C 代码</figcaption>
-</figure>
-</div>
 <!--
+## [Neovim](https://neovim.io/)
+
+::: {.callout-tip}
+
+若非已熟悉 Neovim/Vim，可考虑使用 [Helix](https://helix-editor.com/)。
+
+Helix 具有类似 Vim（但有所不同）的编辑模式、更平滑的学习曲线以及开箱即用的 [Tree-sitter](https://tree-sitter.github.io/tree-sitter/)（提供语法高亮、自动缩进等功能）、[LSP](https://microsoft.github.io/language-server-protocol/)（提供自动补全、定义跳转、引用查找等功能）、模糊查找、自动括号等支持。其不足目前主要在于没有成熟的插件机制。
+
+上述功能于 Neovim 皆可借由插件实现，但学习成本毕竟较大。
+
+Vim、Neovim、Helix 可类比于 bash、zsh、fish：bash 粗糙却或许已满足需求，zsh
+需配置却取得了兼容性的平衡，而对于无编写大量兼容性 shell 脚本需求的用户，fish just works fine。
+
+:::
+
+
+::: {.callout-note collapse="true"}
+
+安装 Neovim：
+
+```sh
+mkdir -p ~/.local/bin
+wget -O ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod +x ~/.local/bin/nvim
+```
+
+编辑 `~/.config/fish/config.fish`，添加上述路径至环境变量：
+
+```sh
+set -x PATH ~/.local/bin $PATH
+```
+
+下载 Neovim 配置：
+
+```sh
+git clone --depth 1 https://github.com/GlekoMa/nvim
+mv nvim ~/.config/nvim
+```
+
+进入 `nvim`，执行 `PlugInstall`。
+
+:::
+
+Neovim 是 Vim 的分叉，拥有更活跃的社区。
+Neovim/Vim 界面没有多余组件，只需掌握 `hjkl`（移动光标）、`i`（插入）、`<Esc>`（返回普通模式）、`:w`（保存）和 `:q`（退出）即可使用。输入`:Tutor` 查看并练习更多操作。
+
+![已配置 Neovim 截图](nvim_config.png)
+
+Neovim/Vim 易于扩展，例如配置 `F5` 快捷编译执行 C 代码：
+
+![Neovim 快捷编译执行 C 代码](nvim_gcc_map.webm)
+
 ## 桌面环境
 
 ### 窗口管理器：[niri](https://github.com/yalter/niri)

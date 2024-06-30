@@ -1,7 +1,7 @@
 ---
 title: "开发环境配置"
 date: "2024-06-16"
-date-modified: "2024-06-25"
+date-modified: "2024-06-30"
 toc: true
 ---
 
@@ -95,6 +95,19 @@ fzf (fuzzy finder) 是一个命令行模糊查找工具，用于快速搜索和�
 
 ![fzf 快捷键绑定](fzf_keymaps.webm)
 
+## [Helix](https://helix-editor.com)
+
+若非已熟悉 Neovim/Vim，可考虑使用 [Helix](https://helix-editor.com/)。
+
+Helix 具有类似 Vim（但有所不同）的编辑模式、更平滑的学习曲线以及开箱即用的 [Tree-sitter](https://tree-sitter.github.io/tree-sitter/)（提供语法高亮、自动缩进等功能）、[LSP](https://microsoft.github.io/language-server-protocol/)（提供自动补全、定义跳转、引用查找等功能）、模糊查找、自动括号等支持。其不足目前主要在于没有成熟的插件机制。
+
+上述功能于 Neovim 皆可借由插件实现，但学习成本毕竟较大。
+
+Vim、Neovim、Helix 可类比于 bash、zsh、fish：bash 粗糙却或许已满足需求，zsh
+需配置却取得了兼容性的平衡，而对于无编写大量兼容性 shell 脚本需求的用户，fish just works fine。
+
+
+<!--
 ## [Neovim](https://neovim.io/)
 
 ::: {.callout-tip}
@@ -147,8 +160,6 @@ Neovim/Vim 易于扩展，例如配置 `F5` 快捷编译执行 C 代码：
 
 ![Neovim 快捷编译执行 C 代码](nvim_gcc_map.webm)
 
-
-<!--
 ## 桌面环境
 
 ### 窗口管理器：[niri](https://github.com/yalter/niri)
